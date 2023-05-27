@@ -1,0 +1,35 @@
+----Create a store database
+
+CREATE TABLE items (id INTEGER PRIMARY KEY, name TEXT, inventory INTEGER, price INTEGER,aisle INTEGER);
+
+INSERT INTO items VALUES (1, "Laptop Bag",20, 15.99, 4);
+INSERT INTO items VALUES(2, "Backpack", 11, 10.99, 4);
+INSERT INTO items VALUES(3, "Pencil", 100, .56, 2);
+INSERT INTO items VALUES(4, " Markers", 250, 5.99, 2);
+INSERT INTO items VALUES(5, "Crayons", 68, 3.99, 2);
+INSERT INTO items VALUES(6, "Printer", 3, 89.99, 3);
+INSERT INTO items VALUES(7, "Paper", 1000, 25.99, 2);
+INSERT INTO items VALUES(8, "Wires", 37, 11.99, 3);
+INSERT INTO items VALUES(9, "Cleaning Wipes", 47, 10.99, 3);
+INSERT INTO items VALUES(10, "Post-It notes", 588, 7.99, 5);
+INSERT INTO items VALUES(11, "Binders", 345, 4.99, 6);
+INSERT INTO items VALUES(12, "Rulers", 87, .99, 7);
+INSERT INTO items VALUES(13, "Planners", 9723, 18.99, 9); 
+INSERT INTO items VALUES(14, "Journal", 2256, 6.99, 7);
+INSERT INTO items VALUES(15, "Computer", 34, 699.54, 3);
+INSERT INTO items VALUES(16, "Paperclips", 5670, 3.99, 5);
+INSERT INTO items VALUES(17, "STAPLER", 324, 5.99, 6);
+INSERT INTO items VALUES(18, "Pens", 1345, 14.99, 2);
+INSERT INTO items VALUES(19, "Calculator", 1243, 8.45, 7);
+INSERT INTO items VALUEs(20, "Desk organizer", 52, 59.99, 4);
+
+
+--display the database ordered by price
+SELECT * FROM items
+ORDER BY price;
+
+
+--what is the average price of each item and total inventory?
+SELECT avg(price) from items;
+SELECT sum(inventory) from items;
+
